@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">WeatherPrediction</string>
+    <string name="enter_the_city_name">Enter the City Name</string>
+    <string name="c">0°C</string>
+    <string name="loading_data">Loading data....</string>
+    <string name="todo">TODO</string>
+    <string name="loading">CityName</string>
+
+</resources>
