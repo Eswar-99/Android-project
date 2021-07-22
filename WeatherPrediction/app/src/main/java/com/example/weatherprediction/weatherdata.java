@@ -21,7 +21,7 @@ public class weatherdata {
             SimpleDateFormat sdf1=new SimpleDateFormat("EEEE, dd MMM yyyy");
             Date dateFormat1=new java.util.Date(date*1000L);
             String date1=sdf1.format(dateFormat1);
-            SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+            SimpleDateFormat sdf = new SimpleDateFormat("hh:mm aa");
             Date dateFormat = new java.util.Date(sunrise*1000L);
             String fsunrise = sdf.format(dateFormat );
             int sunset=jsonObject.getJSONObject("sys").getInt("sunset");
@@ -38,7 +38,7 @@ public class weatherdata {
             double windspeed=jsonObject.getJSONObject("wind").getDouble("speed");
             weather.mCity = jsonObject.getString("name");
             weather.mCondition = jsonObject.getJSONArray("weather").getJSONObject(0).getInt("id");
-            weather.mWeather=jsonObject.getJSONArray("weather").getJSONObject(0).getString("main")+"\n"+date1+"\nFeels like:"+Integer.toString(rfeelslike)+"°C\nMin Temperature:"+Integer.toString(rtemp_min)+"°C\nMax Temperature:"+Integer.toString(rtemp_max)+"°C\nPressure:"+Integer.toString(pressure)+"hPa\nHumidity:"+Integer.toString(humidity)+"%\nWind speed:"+Double.toString(windspeed)+"m/s"+"\nSunrise:"+fsunrise+"\nSunset:"+fsunset;
+            weather.mWeather=jsonObject.getJSONArray("weather").getJSONObject(0).getString("main")+"\n"+date1+"\nFeels like : "+Integer.toString(rfeelslike)+"°C\nMin Temperature : "+Integer.toString(rtemp_min)+"°C\nMax Temperature : "+Integer.toString(rtemp_max)+"°C\nPressure : "+Integer.toString(pressure)+"hPa\nHumidity : "+Integer.toString(humidity)+"%\nWind speed : "+Double.toString(windspeed)+"m/s"+"\nSunrise : "+fsunrise+"\nSunset : "+fsunset;
             weather.mIcon=updateWeatherIcon(weather.mCondition);
             weather.latitude=jsonObject.getJSONObject("coord").getDouble("lat");
             weather.longitude=jsonObject.getJSONObject("coord").getDouble("lon");

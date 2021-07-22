@@ -81,22 +81,6 @@ public class MainActivity extends AppCompatActivity {
         day7=findViewById(R.id.day7);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         mCityFinder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -217,7 +201,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
                 // super.onFailure(statusCode, headers, responseString, throwable);
-                Toast.makeText(MainActivity.this,"Network Error",Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Network Error", Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -236,7 +220,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
                 //super.onFailure(statusCode, headers, responseString, throwable);
-                Toast.makeText(MainActivity.this,"Network Error",Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Network Error", Toast.LENGTH_SHORT).show();
             }
         });
     }

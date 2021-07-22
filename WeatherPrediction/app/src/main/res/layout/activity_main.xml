@@ -26,7 +26,8 @@
             android:layout_height="wrap_content"
             android:text="@string/enter_the_city_name"
             android:textColor="@color/black"
-            android:layout_centerInParent="true">
+            android:layout_centerInParent="true"
+            android:alpha=".5">
         </TextView>
     </RelativeLayout>
 
@@ -105,13 +106,11 @@
     </LinearLayout>
     </androidx.cardview.widget.CardView>
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_below="@id/cardview1"
-        android:layout_margin="20dp"
         >
     <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -138,8 +137,8 @@
         </TextView>
 
         <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:layout_gravity="end"
             android:layout_marginRight="30dp"
             android:id="@+id/icon1"
@@ -182,8 +181,8 @@
             android:textSize="20sp">
         </TextView>
         <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:layout_gravity="end"
             android:layout_marginRight="30dp"
             android:id="@+id/icon2"
@@ -226,8 +225,8 @@
             android:textSize="20sp">
         </TextView>
         <ImageView
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_gravity="end"
         android:layout_marginRight="30dp"
         android:id="@+id/icon3"
@@ -271,8 +270,8 @@
             android:textSize="20sp">
         </TextView>
         <ImageView
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_gravity="end"
         android:layout_marginRight="30dp"
         android:id="@+id/icon4"
@@ -315,8 +314,8 @@
             android:textSize="20sp">
         </TextView>
         <ImageView
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_gravity="end"
         android:layout_marginRight="30dp"
         android:id="@+id/icon5"
@@ -358,8 +357,8 @@
             android:textSize="20sp">
         </TextView>
         <ImageView
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_gravity="end"
         android:layout_marginRight="30dp"
         android:id="@+id/icon6"
@@ -403,8 +402,8 @@
         </TextView>
 
         <ImageView
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_gravity="end"
         android:layout_marginRight="30dp"
         android:id="@+id/icon7"

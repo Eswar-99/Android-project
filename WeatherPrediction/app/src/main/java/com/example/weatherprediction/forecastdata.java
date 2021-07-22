@@ -19,7 +19,7 @@ public class forecastdata {
                 weather.mcondition[i] = jsonObject.getJSONArray("daily").getJSONObject(i+1).getJSONArray("weather").getJSONObject(0).getInt("id");
                 int d=jsonObject.getJSONArray("daily").getJSONObject(i+1).getInt("dt");
                 int sunrise=jsonObject.getJSONArray("daily").getJSONObject(i+1).getInt("sunrise");
-                SimpleDateFormat sdf1 = new SimpleDateFormat("HH:mm:ss");
+                SimpleDateFormat sdf1 = new SimpleDateFormat("hh:mm aa");
                 Date dateFormat1 = new java.util.Date(sunrise*1000L);
                 String fsunrise = sdf1.format(dateFormat1 );
                 int sunset=jsonObject.getJSONArray("daily").getJSONObject(i+1).getInt("sunset");
@@ -35,7 +35,7 @@ public class forecastdata {
                 int rtemperature=(int)Math.rint(temperature);
                 double feelslike=jsonObject.getJSONArray("daily").getJSONObject(i+1).getJSONObject("feels_like").getDouble("day")-273.15;
                 int rfeelslike=(int)Math.rint(feelslike);
-                weather.mweather[i] = jsonObject.getJSONArray("daily").getJSONObject(i+1).getJSONArray("weather").getJSONObject(0).getString("main")+"\nTemperature:"+Integer.toString(rtemperature)+"°C\nFellslike:"+Integer.toString(rfeelslike)+"°C\nPressure:"+Integer.toString(pressure)+"hPa\nHumidity:"+Integer.toString(humidity)+"%\nSunrise:"+fsunrise+"\nSunset:"+fsunset;
+                weather.mweather[i] = jsonObject.getJSONArray("daily").getJSONObject(i+1).getJSONArray("weather").getJSONObject(0).getString("main")+"\nTemperature : "+Integer.toString(rtemperature)+"°C\nFeelslike : "+Integer.toString(rfeelslike)+"°C\nPressure : "+Integer.toString(pressure)+"hPa\nHumidity : "+Integer.toString(humidity)+"%\nSunrise : "+fsunrise+"\nSunset : "+fsunset;
                 weather.micon[i] = updateWeatherIcon(weather.mcondition[i]);
             }
             return weather;
